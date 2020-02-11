@@ -1,6 +1,5 @@
 body {
-    width: 100%;
-    overflow-x: hidden;
+    max-width: 100%;
     background:linear-gradient(to bottom right, #ffecd2, #fcb69f);
 }
 .menu ul {
@@ -35,7 +34,6 @@ body {
     width: 50%
 }
 .content {
-    content: "";
     display: table;
     clear: both;
 }
