@@ -13,7 +13,7 @@
         position: absolute;
         top: 10%;
         left: 10%;
-        border: 2px solid #fff;
+        border: none;
         margin: 2rem 2rem 2rem 0rem;
         padding: 2rem 2rem;
         text-align: center;
@@ -24,7 +24,7 @@
         position: absolute;
         top: 30%;
         left: 16.5%;
-        border: 2px solid #fff;
+        border: none;
         margin: 2rem 2rem 2rem 0rem;
         padding: 2rem 2rem;
         text-align: center;
