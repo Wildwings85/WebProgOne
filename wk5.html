@@ -27,16 +27,17 @@
         // it doesn't return anything
         function process_form(form) {
             var school = form.input_school.value;
-            var name = form.input_name.value;
+            var sName = form.input_sName.value;
             var gender = form.input_gender.value;
             var dob = form.input_dob.value;
             var grade = form.input_grade.value;
+            var gName = form.input_gName.value;
             var email = form.input_email.value;
 
             //simply display user entered values
-            window.alert("school: " + school + "name: " + name + " gender: " + gender + "DoB: " + dob + "grade: " + grade + " email: " + email);
+            window.alert("school: " + school + "student name: " + sName + " gender: " + gender + "DoB: " + dob + "grade: " + grade + "parents name: " + gName + " email: " + email);
 
-            console.log("school: " + school + "name: " + name + " gender: " + gender + "DoB: " + dob + "grade: " + grade + " email: " + email);
+            console.log("school: " + school + "student name: " + sName + " gender: " + gender + "DoB: " + dob + "grade: " + grade + "parents name: " + gName + " email: " + email);
         }
         // validate date
         function validate_date(dob) {
@@ -126,8 +127,8 @@
             </div>
 
             <div class="form-group">
-                <label for="input_name">Name</label>
-                <input type="text" class="form-control" id="input_name" placeholder="Name">
+                <label for="input_sName">Student's Name</label>
+                <input type="text" class="form-control" id="input_sName" placeholder="Student's Name">
             </div>
 
             <div class="form-group">
@@ -153,6 +154,11 @@
                     <option value="7th">7th grade</option>
                     <option value="8th">8th grade</option>
                 </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input_gName">Parents'/Guardian's Name</label>
+                <input type="text" class="form-control" id="input_gName" placeholder="Parents'/Guardian's Name">
             </div>
 
             <div class="form-group">
