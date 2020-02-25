@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Week 5</title>
+
+    <style>
+        #my_form {
+            margin-top: 10%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+
+        }
+    </style>
+
+    <script>
+        // this function takes the form object and outputs the user entered values
+        // it doesn't return anything
+        function process_form(form) {
+            var school = form.input_school.value;
+            var name = form.input_name.value;
+            var gender = form.input_gender.value;
+            var dob = form.input_dob.value;
+            var grade = form.input_grade.value;
+            var email = form.input_email.value;
+
+            //simply display user entered values
+            window.alert("school: " + school + "name: " + name + " gender: " + gender + "DoB: " + dob + "grade: " + grade + " email: " + email);
+
+            console.log("school: " + school + "name: " + name + " gender: " + gender + "DoB: " + dob + "grade: " + grade + " email: " + email);
+        }
+        // validate date
+        function validate_date(dob) {
+            if (/^(0?[1-9]|1[012])[\/\-](0?[1-9]|[12][0-9]|3[01])[\/\-]\d{4}$/.test(dob)) {
+                return (true);
+            }
+            alert("You have entered an invalid date!");
+            return (false);
+        }
+
+        // validate email
+        function validate_email(email) {
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+                return (true);
+            }
+            alert("You have entered an invalid email address!");
+            return (false);
+        }
+    </script>
+</head>
+
+<body>
+    <!--nav bar-->
+    <ul class="nav m-5">
+        <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk0.html">Week 0</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk1.html">Week 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk2.html">Week 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk3.html">Week 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk4.html">Week 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Week 6</a>
+        </li>
+    </ul>
+    <!--title-->
+    <div class="container text-center">
+        <h1>2021 School Registration</h1>
+    </div>
+    <!--links to school information-->
+    <div class="row text-center m-5">
+        <div class="col-sm-4 p-2">
+            <a href="#" target="_blank">
+                <img src="./img/SchoolA.jpg" alt="Liberty Middle School">
+                <p>Liberty Middle School</p>
+            </a>
+        </div>
+        <div class="col-sm-4 p-2">
+            <a href="#" target="_blank">
+                <img src="./img/SchoolB.jpg" alt="Freedom Middle School">
+                <p>Freedom Middle School</p>
+            </a>
+        </div>
+        <div class="col-sm-4 p-2">
+            <a href="#" target="_blank">
+                <img src="./img/SchoolC.jpg" alt="Justice Middle School">
+                <p>Justice Middle School</p>
+            </a>
+        </div>
+    </div>
+    <!--title-->
+    <div class="container text-center">
+        <h1>Application Form</h1>
+    </div>
+    <!--form-->
+    <div class="container">
+        <form id="my_form" action="#">
+            <div class="form-group">
+                <label for="input_school">School</label>
+                <select class="form-control" id="input_school">
+                    <option value="none">Select School</option>
+                    <option value="LMS">Liberty Middle School</option>
+                    <option value="FMS">Freedom Middle School</option>
+                    <option value="JMS">Justice Middle School</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input_name">Name</label>
+                <input type="text" class="form-control" id="input_name" placeholder="Name">
+            </div>
+
+            <div class="form-group">
+                <label for="input_gender">Gender</label>
+                <select class="form-control" id="input_gender">
+                    <option value="none">-</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input_dob">Date of Birth</label>
+                <input type="text" class="form-control" id="input_dob" placeholder="mm/dd/yyyy"
+                    onfocusout="return validate_date(this.value)">
+            </div>
+
+            <div class="form-group">
+                <label for="input_grade">Upcoming Grade</label>
+                <select class="form-control" id="input_grade">
+                    <option value="none">-</option>
+                    <option value="6th">6th grade</option>
+                    <option value="7th">7th grade</option>
+                    <option value="8th">8th grade</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="input_email">Contact Email</label>
+                <!-- NOTICE: document.getElementById("input_email").value can be replaced with this.value in function call below -->
+                <input type="email" class="form-control" id="input_email" placeholder="Email"
+                    onfocusout="return validate_email(this.value)">
+            </div>
+
+            <!-- NOTICE: document.getElementById('my_form') returns the form object which is then passed on to a function -->
+            <button type="submit" class="btn btn-primary"
+                onclick="process_form(document.getElementById('my_form'))">Submit</button>
+        </form>
+    </div>
+    <!--footer-->
+    <footer class="container text-center text-secondary">
+        <h6>Copyright &copy; 2020, Eric Lau</h6>
+    </footer>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
