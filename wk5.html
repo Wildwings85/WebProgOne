@@ -4,8 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Week 5</title>
 
@@ -15,10 +14,10 @@
             margin-left: 10%;
             margin-right: 10%;
         }
+        
         img {
             max-width: 100%;
             max-height: 100%;
-
         }
     </style>
 
@@ -142,8 +141,7 @@
 
             <div class="form-group">
                 <label for="input_dob">Date of Birth</label>
-                <input type="text" class="form-control" id="input_dob" placeholder="mm/dd/yyyy"
-                    onfocusout="return validate_date(this.value)">
+                <input type="text" class="form-control" id="input_dob" placeholder="mm/dd/yyyy" onfocusout="return validate_date(this.value)">
             </div>
 
             <div class="form-group">
@@ -164,13 +162,11 @@
             <div class="form-group">
                 <label for="input_email">Contact Email</label>
                 <!-- NOTICE: document.getElementById("input_email").value can be replaced with this.value in function call below -->
-                <input type="email" class="form-control" id="input_email" placeholder="Email"
-                    onfocusout="return validate_email(this.value)">
+                <input type="email" class="form-control" id="input_email" placeholder="Email" onfocusout="return validate_email(this.value)">
             </div>
 
             <!-- NOTICE: document.getElementById('my_form') returns the form object which is then passed on to a function -->
-            <button type="submit" class="btn btn-primary"
-                onclick="process_form(document.getElementById('my_form'))">Submit</button>
+            <button type="submit" class="btn btn-primary" onclick="process_form(document.getElementById('my_form'))">Submit</button>
         </form>
     </div>
     <!--footer-->
@@ -179,14 +175,9 @@
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
+
 </html>
