@@ -7,45 +7,29 @@
     .set1 {
         display: none;
     }
-    h1 {
-        font-size: 1.5rem;
-        color: #fff;
-        position: absolute;
-        top: 10%;
-        left: 10%;
-        border: none;
-        margin: 2rem 2rem 2rem 0rem;
-        padding: 2rem 2rem;
-        text-align: center;
+    .container {
+        margin-left: 10%;
+    }
+    .row{
+        margin-right:15px;
+        margin-left:15px;
+        z-index: 2;
     }
     h2 {
         font-size: 1rem;
         color: #fff;
-        position: absolute;
-        top: 30%;
-        left: 16.5%;
-        border: none;
+        border: 2px solid #fff;
         margin: 2rem 2rem 2rem 0rem;
         padding: 2rem 2rem;
         text-align: center;
     }
     .button {
-        position: absolute;
         padding: 3rem 1.5rem;
-        border-radius: 50%;
-        top: 50%;
-        left: 34%;
-        animation: glowing 1s infinite;
     }
     .button a {
         text-decoration:none;
         color:#fff;
     }
-    @keyframes glowing {
-        0% { background-color: rgba(255, 255, 255, 0.4); box-shadow: 0 0 3px rgba(255, 255, 255, 0.4); }
-        50% { background-color: rgba(255, 255, 255, 0.8); box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
-        100% { background-color: rgba(255, 255, 255, 0.4); box-shadow: 0 0 3px rgba(255, 255, 255, 0.4); }
-        }
 }
 /* Tablet Styles */
 @media screen and (min-width: 401px) and (max-width: 960px) {
@@ -78,34 +62,25 @@
     .set1 {
         display: none;
     }
-    h1{
-        font-size: 1.5rem;
-        color: #fff;
-        position: absolute;
-        top: 5%;
-        left: 21%;
-        border: 2px solid #fff;
-        padding: 1rem 2rem;
-        text-align: center;
+    .container {
+        margin-left: 10%;
+    }
+    .row{
+        margin-right:15px;
+        margin-left:15px;
+        z-index: 2;
     }
     h2 {
         font-size: 1rem;
         color: #fff;
-        position: absolute;
-        top: 25%;
-        left: 33%;
         border: 2px solid #fff;
         margin: 2rem 2rem 2rem 0rem;
-        padding: 1rem 1rem;
+        padding: 2rem 2rem;
         text-align: center;
     }
+    
     .button {
-        position: absolute;
         padding: 3rem 1.5rem;
-        border-radius: 50%;
-        top: 50%;
-        left: 40%;
-        animation: glowing 1s infinite;
     }
     .button a {
         text-decoration:none;
@@ -208,26 +183,32 @@ body {
     transform: scale(0.8) rotateX(180deg);
     filter: blur(4px);
 }
+.text-center {
+    text-align:center!important
+}
+.container {
+    margin-left: 10%;
+}
 .row{
     display:-webkit-box;
     display:-ms-flexbox;
     display:flex;
     -ms-flex-wrap:wrap;
     flex-wrap:wrap;
-    margin-right:-15px;
-    margin-left:-15px;
+    margin-right:15px;
+    margin-left:15px;
     z-index: 2;
 }
-.col {
+.col-sm-4 {
     position:relative;
     width:100%;
     min-height:1px;
     padding-right:15px;
     padding-left:15px;
     -webkit-box-flex:0;
-    -ms-flex:0 0 33.333333%;
-    flex:0 0 33.333333%;
-    max-width:33.333333%;
+    -ms-flex:0 0 31%;
+    flex:0 0 31%;
+    max-width:33.33333%;
     z-index: 2;
 }
 h2 {
@@ -237,10 +218,6 @@ h2 {
     border: 2px solid #fff;
     padding: 2rem 1rem;
     z-index: 2;
-}
-.button {
-    
-    
 }
 .button a {
     text-decoration:none;
