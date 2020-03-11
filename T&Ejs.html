@@ -8,79 +8,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>Trial&Error</title>
-    <script>
-        var s1 = {
-            standard: "one",
-            title: "Interpretive Listening",
-            description: "The student will be able to understand and interpret information, concepts, and ideas orally from culturally authentic sources on a variety of topics in the target language.",
-            NM1: "Demonstrate understanding of basic words, phrases, and questions about self and personal experiences through gestures, drawings, pictures, and actions.",
-            NM2: "Demonstrate understanding of everyday expressions dealing with simple and concrete daily activities and needs presented in a clear, slow, and repeated speech.",
-            NM3: "Demonstrate understanding of basic words and phrases in simple messages and announcements in familiar settings.",
-            NM4: "Demonstrate understanding of simple information supported by visuals through a variety of media.",
-            NM5: "Demonstrate understanding of simple rhymes, songs, poems, and read aloud stories.",
-            NM6: "Follow short, simple directions.",
-        };
-        var myTable = document.getElementById("myTable");
-myTable.rows[1].cells[1].textContent = s1;
-myTable.rows[1].cells[2].textContent = data2;
-    </script>
+    
+    
 </head>
 
 <body>
-    <button type="button" class="btn btn-secondary">Standard 1</button>
-    <button type="button2" class="btn btn-secondary ">Standard 2</button>
-
     <div class="container">
-        <table id="one" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>Firstname</th>
-                    <th>Lastname</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td id="title">John</td>
-                    <td class="col-sm-9">Doe</td>
-                </tr>
-                <tr>
-                    <td id="description">Mary</td>
-                    <td class="col-sm-9">Moe</td>
-                </tr>
-                <tr>
-                    <td id="NM1">July</td>
-                    <td class="col-sm-9">Dooley</td>
-                </tr>
-            </tbody>
-        </table>
+        <p id="display"></p>
     </div>
-
-    <div  class="container text-center ">
-        <dl class="row">
-            <dt  class="col-sm-3">Title</dt>
-            <dd ></dd>
-            <dt  class="col-sm-3">Description</dt>
-            <dd ></dd>
-
-            <dt  class="col-sm-3"></dt>
-            <dd ></dd>
-
-            <dt id="NM2" class="col-sm-3">2</dt>
-            <dd class="col-sm-9"></dd>
-
-            <dt id="NM3" class="col-sm-3">3</dt>
-            <dd class="col-sm-9"></dd>
-
-            <dt id="NM4" class="col-sm-3">4</dt>
-            <dd class="col-sm-9"></dd>
-
-            <dt id="NM5" class="col-sm-3">5</dt>
-            <dd class="col-sm-9"></dd>
-
-            <dt id="NM6" class="col-sm-3">6</dt>
-            <dd class="col-sm-9"></dd>
-        </dl>
-    </div>
+    <script>
+        var d1 = {
+            name: "American Eskimo Dog",
+            att: "Playful, Perky, Smart",
+            des: "The American Eskimo Dog combines striking good looks with a quick and clever mind in a total brains-and-beauty package. Neither shy nor aggressive, Eskies are always alert and friendly, though a bit conservative when making new friends."
+        }
+        var de1 = "Your match: <br><b>" + d1.name + "</b><br>" + d1.att + "<br>" + d1.des + "";
+        document.getElementById("display").innerHTML=de1;
+    </script>
 </body>
 
 </html>

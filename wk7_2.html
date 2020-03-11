@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/wk7_2.js"></script>
+    <title>Week 7</title>
+</head>
+
+<body>
+    <ul class="nav m-5">
+        <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk0.html">Week 0</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk1.html">Week 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk2.html">Week 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk3.html">Week 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk4.html">Week 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk5.html">Week 5</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk6.html">Week 6</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk8.html">Week 8</a>
+        </li>
+    </ul>
+
+    <div class="fluid-container">
+        <div class="jumbotron text-center">
+            <h1>Dog Breed</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <form id="my_form">
+            <h4>Please check all that apply:</h4>
+            <br>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exp">
+                <label class="form-check-label" for="exp">I am new to dogs.</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="ap">
+                <label class="form-check-label" for="ap">I live in an apartment.</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="hsy">
+                <label class="form-check-label" for="hsy">I live in a house with a small yard.</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="hly">
+                <label class="form-check-label" for="hly">I live in a house with a large yard.</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="kid">
+                <label class="form-check-label" for="kid">I have kids under age 10.</label>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="process_form()">Submit</button>
+
+            <div class="container">
+                <p id="display"></p>
+            </div>
+            
+    
+    </div>
+    </form>
+    </div>
+
+
+</body>
+
+</html>
