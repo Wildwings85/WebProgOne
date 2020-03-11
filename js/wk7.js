@@ -21,27 +21,27 @@ this.sort = function () {
     if (this.input_exp.new && this.input_home.ap && this.input_kid.yes) {
         return de1; // new, apartment, kids
     } else if  (this.input_exp.new && this.input_home.ap && this.input_kid.no) {
-        return "de2"; // new, apartment,  no kids
+        return de2; // new, apartment,  no kids
     } else if  (this.input_exp.new && this.input_home.hsy && this.input_kid.yes) {
-        return "de3"; // new, house small yard, kids
+        return de3; // new, house small yard, kids
     } else if  (this.input_exp.new && this.input_home.hsy && this.input_kid.no) {
-        return "de4"; // new, house small yard, no kids
+        return de4; // new, house small yard, no kids
     } else if  (this.input_exp.new && this.input_home.hly && this.input_kid.yes) {
-        return "de5"; // new, house large yard, kids
+        return de5; // new, house large yard, kids
     } else if  (this.input_exp.new && this.input_home.hly && this.input_kid.no) {
-        return "de6"; //new, house large yard, no kids
+        return de6; //new, house large yard, no kids
     } else if  (this.input_exp.owned && this.input_home.ap && this.input_kid.yes) {
-        return "de7"; // owned, apartment, kids
+        return de7; // owned, apartment, kids
     } else if  (this.input_exp.owned && this.input_home.ap && this.input_kid.no) {
-        return "de8"; // owned, apartment, no kids
+        return de8; // owned, apartment, no kids
     } else if  (this.input_exp.owned && this.input_home.hsy && this.input_kid.yes) {
-        return "de9"; // owned, house small yard, kids
+        return de9; // owned, house small yard, kids
     } else if  (this.input_exp.owned && this.input_home.hsy && this.input_kid.no) {
-        return "de10"; // owned, house small yard, no kids
+        return de10; // owned, house small yard, no kids
     } else if  (this.input_exp.owned && this.input_home.hly && this.input_kid.yes) {
-        return "de11"; // owned, house large yard, kids
+        return de11; // owned, house large yard, kids
     } else if  (this.input_exp.owned && this.input_home.hly && this.input_kid.no) {
-        return "de12"; // owned, house large yard, no kids
+        return de12; // owned, house large yard, no kids
     }
 }
 
