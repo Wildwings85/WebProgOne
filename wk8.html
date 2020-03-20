@@ -8,8 +8,16 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <script src="./js/wk7.js"></script>
-    <title>Week 7</title>
+    <script src="./js/wk8.js"></script>
+    <title>Week 8</title>
+    <style>
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
 </head>
 
 <body>
@@ -39,13 +47,19 @@
             <a class="nav-link" href="./wk6.html">Week 6</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./wk8.html">Week 8</a>
+            <a class="nav-link" href="./wk7.html">Week 7</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk10.html">Week 10</a>
         </li>
     </ul>
 
     <div class="fluid-container">
         <div class="jumbotron text-center">
-            <h1>Dog Breed Selector</h1>
+            <img src="./img/dogs-banner.jpg" alt="dogs-banner">
+            <div class="centered">
+                <h1>Dog Breed Selector</h1>
+            </div>
         </div>
     </div>
 
@@ -82,8 +96,11 @@
         </form>
     </div>
     <br>
-    <div class="container">
-        <p id="display"></p>
+    <div class = "container">
+        <img id = "photo">
+        <h1 id = "dog_breed"></h1>
+        <p id = "att"></p>
+        <p id = "des"></p>
     </div>
 
 </body>
