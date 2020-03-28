@@ -28,9 +28,38 @@ function Patient(fm) {
             }
 
     this.diagnose = function () {
+        this.score = function () {
+            var score_q = 0.0;
+            var score_e = 0.0;
+            
+            for (var x = 0; x < questions.length; x++) {
+                if (this.question[x]) {
+                    score_q += Number(questions[x].weight);
+                }
+            }
+            
+            for (var x = 0; x < effects.length; x++) {
+                if (this.effect[x]) { 
+                    score_e += Number(effects[x].weight);
+                }
+            }
+            return score_q + score_e;
+        }
 
+        if (score_q>="7" && score_e>="1") {
+            return "Your answers suggest you are suffering from severe depression. It is important that you schedule an appointment with your doctor or a mental health worker now."
+        } else if (score_q>="4" && score_q<="6"&& score_e>="1") {
+            return "Your answers suggest you are suffering from moderate depression. Consider watchful waiting, and testing again normally within two weeks."
+        } else if (score_q>="1" && score_q<="3"&& score_e>="1") {
+            return "Your answers suggest you are suffering from mild depression.Consider watchful waiting, and testing again normally within two weeks."
+        } else {
+            return "Your answers suggest you may not be suffering from depression. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. "
+        }
     }
-}
+        if (!(this.question[0] || this.question[1] || this.question[2] || this.question[4] || this.question[5] || this.question[6] || this.question[7] || this.question[8]) && (this.question[9]) && !(this.effect[0] || this.effect[1] || this.effect[2])) {
+            return "If you’re having thoughts about hurting or killing yourself please reach out straight away and talk to someone who’s trained to help. Even if you feel like no-one in the world gets you right now, there are people who can support you.";
+        }
+    }
 
 function process_form() {
     var fm = document.getElementById("my_form");
@@ -67,7 +96,7 @@ function load_data() {
 
             var qns = "";
             for (var x = 0; x < questions.length; x++) {
-                qns = qns + "<div class='form-group form-check' onmouseover='display_description(" + x + ", 0)' onmouseout='display_description(-1,0)'>";
+                qns = qns + "<div class='form-group form-check'>";
                 qns = qns + "<input type='checkbox' class='form-check-input' id='question" + questions[x].id + "'>";
                 qns = qns + "<label class='form-check-label' for='question" + questions[x].id + "'>" + questions[x].label + "</label></div>";
             }
@@ -75,7 +104,7 @@ function load_data() {
             
             var efs = "";
             for (var x = 0; x < effects.length; x++) {
-                efs = efs + "<div class='form-group form-check' onmouseover='display_description(" + x + ",1)' onmouseout='display_description(-1,1)'>";
+                efs = efs + "<div class='form-group form-check'>";
                 efs = efs + "<input type='checkbox' class='form-check-input' id='effect" + effects[x].id + "'>";
                 efs = efs + "<label class='form-check-label' for='effect" + effects[x].id + "'>" + effects[x].label + "</label></div>";
             }
