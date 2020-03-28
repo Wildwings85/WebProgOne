@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="./js/wk9.js"></script>
+    <title>Week 9</title>
+</head>
+
+<body onload="load_data()">
+    <ul class="nav m-5">
+        <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk0.html">Week 0</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk1.html">Week 1</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk2.html">Week 2</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk3.html">Week 3</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk4.html">Week 4</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk5.html">Week 5</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk6.html">Week 6</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk7.html">Week 7</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk8.html">Week 8</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./wk10.html">Week 10</a>
+        </li>
+    </ul>
+
+    <div class="container">
+        <h1>Patient Health Questionaire</h1>
+    </div>
+    <div class="container">
+        <form id="my_form">
+            <div id="container_questions">
+            </div>
+            <div id="container_effects">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="process_form()">Submit</button>
+            <!-- recommendation output area -->
+            <div id="output">
+            </div>
+        </form>
+    </div>
+</body>

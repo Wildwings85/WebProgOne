@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phq9>
+    <questions>
+        <question id="1">
+            How often have you been bothered that you have little interest or pleasure in doing things over the last two weeks?
+        </question>
+        <question id="2">
+            How often have you been bothered by feeling down, depressed, irritable, or hopeless over the last two weeks?
+        </question>
+        <question id="3">
+            How often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much over the last two weeks?
+        </question>
+        <question id="4">
+            How often have you been bothered by feeling tired, or having little energy over the last two weeks?
+        </question>
+        <question id="5">
+            How often have you been bothered that you have poor appetite, weight loss, or overeating over the last two weeks?
+        </question>
+        <question id="6">
+            How often have you been bothered by feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down over the last two weeks?
+        </question>
+        <question id="7">
+            How often have you been bothered that you have trouble concentrating on things like school work, reading, or watching TV over the last two weeks?
+        </question>
+        <question id="8">
+            How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual over the last two weeks?
+        </question>
+        <question id="9">
+            How often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way over the last two weeks?
+        </question>
+    </questions>
+
+    <effect>
+        <question id="1">
+            If you clicked on any problems above, how difficult have they made it for you to do your work?
+        </question>
+        <question id="2">
+            If you clicked on any problems above, how difficult have they made it for you to take care of things at home?
+        </question>
+        <question id="3">
+            If you clicked on any problems above, how difficult have they made it for you to get along with other people?
+        </question>
+    </effect>
+
+    <mc1>
+        <answer score="0">
+            Not at all
+        </answer>
+        <answer score="1">
+            Several days
+        </answer>
+        <answer score="2">
+            More than half the days
+        </answer>
+        <answer score="3">
+            Nearly every day
+        </answer>
+    </mc1>
+
+    <mc2>
+        <answer score="0">
+            Not difficult at all
+        </answer>
+        <answer score="1">
+            Somewhat difficult
+        </answer>
+        <answer score="2">
+            Very difficult
+        </answer>
+        <answer score="3">
+            Extremely difficult
+        </answer>
+    </mc2>
+</phq9>

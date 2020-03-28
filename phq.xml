@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phq9>
+    <questions>
+        <question id="1" weight="1.00" label="How often have you been bothered that you have little interest or pleasure in doing things over the last two weeks?">
+            
+        </question>
+        <question id="2" weight="1.00" label="How often have you been bothered by feeling down, depressed, irritable, or hopeless over the last two weeks?">
+            
+        </question>
+        <question id="3" weight="1.00" label="How often have you been bothered by trouble falling asleep, staying asleep, or sleeping too much over the last two weeks?">
+            
+        </question>
+        <question id="4" weight="1.00" label="How often have you been bothered by feeling tired, or having little energy over the last two weeks?">
+            
+        </question>
+        <question id="5" weight="1.00" label="How often have you been bothered that you have poor appetite, weight loss, or overeating over the last two weeks?">
+            
+        </question>
+        <question id="6" weight="1.00" label="How often have you been bothered by feeling bad about yourself – or feeling that you are a failure, or that you have let yourself or your family down over the last two weeks?">
+            
+        </question>
+        <question id="7" weight="1.00" label="How often have you been bothered that you have trouble concentrating on things like school work, reading, or watching TV over the last two weeks?">
+            
+        </question>
+        <question id="8" weight="1.00" label="How often have you been bothered by moving or speaking so slowly that other people could have noticed? Or the opposite – being so fidgety or restless that you were moving around a lot more than usual over the last two weeks?">
+            
+        </question>
+        <question id="9" weight="1.00" label="How often have you been bothered by thoughts that you would be better off dead, or of hurting yourself in some way over the last two weeks?">
+            
+        </question>
+    </questions>
+
+    <effects>
+        <effect id="1" weight="1.00" label="How difficult have they made it for you to do your work?">
+            
+        </effect>
+        <effect id="2" weight="1.00" label="How difficult have they made it for you to take care of things at home?">
+            
+        </effect>
+        <effect id="3" weight="1.00" label="How difficult have they made it for you to get along with other people?">
+            
+        </effect>
+    </effects>
+</phq9>
