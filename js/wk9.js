@@ -43,9 +43,9 @@ function Patient(fm) {
                 }
             }
             console.log("DEBUG: score_q=" + score_q + " score_e=" + score_e);
-            return score_q + score_e;
+            return score_q & score_e;
         }
-
+        console.log("DEBUG: score_q=" + score_q + " score_e=" + score_e);
         if (score_q >=7 && score_e >=1) {
             return "Your answers suggest you are suffering from severe depression. It is important that you schedule an appointment with your doctor or a mental health worker now."
         } else if (score_q >=4 || score_q <=6 && score_e >=1) {
