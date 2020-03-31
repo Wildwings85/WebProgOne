@@ -10,9 +10,36 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="./js/wk9.js"></script>
     <title>Week 9</title>
+    <style>
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+
+        #myDIV {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 20px;
+            display: none;
+        }
+
+        #output {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: lightcoral;
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
 </head>
 
-<body onload="load_data()">
+<body onload="load_data(); countDown(); elapsedTime(); elapsedTime2(); myFunction3()">
     <ul class="nav m-5">
         <li class="nav-item">
             <a class="nav-link" href="./index.html">Home</a>
@@ -49,21 +76,55 @@
         </li>
     </ul>
 
-    <div class="container">
-        <h1>Patient Health Questionaire</h1>
+    <div class="fluid-container text-center">
+        <img src="./img/42048ca06c340a83-xmas-banner-snow-no-text-6-secs-killgerm-chemicals-ltd.gif"
+            alt="snowing-banner">
+        <div class="centered">
+            <h1>Fun with Time</h1>
+        </div>
     </div>
+    <br>
     <div class="container">
-        <form id="my_form">
-            <h5>Please check all that apply:</h5>
-            <div id="container_questions">
+        <div class="row">
+            <div class="col">
+                <h5>Eastern Standard Time</h5>
+                <div id="est"></div>
             </div>
-            <h5>If you clicked on any problems above,</h5>
-            <div id="container_effects">
+            <div class="col">
+                <h5>Greenwich Mean Time</h5>
+                <div id="utc"></div>
             </div>
-            <button type="button" class="btn btn-primary" onclick="process_form()">Submit</button>
-            <!-- recommendation output area -->
-            <div id="output">
-            </div>
-        </form>
+        </div>
     </div>
+    <br>
+    <div class="container text-center">
+        <button type="button" class="btn btn-info" onclick="myFunction(); myFunction2()">Click Me</button>
+    </div>
+    <br>
+    <div class="container" id="myDIV">
+        <div class="row">
+            <div class="col">
+                <h4>Time Elapsed Since First Case of Covid-19</h4>
+                <br>
+                <h4>Time Elapsed Since First Case of Covid-19 in U.S.</h4>
+            </div>
+            <div class="col">
+                <h4 id="e1"></h4>
+                <br>
+                <h4 id="e2"></h4>
+            </div>
+        </div>
+    </div>
+    <!-- output area -->
+    <div class="container" id="output">
+        <p id="demo"></p>
+    </div>
+    <br>
+    <div class="container text-center">
+        <h4>Countdown to 2021</h4>
+        <br>
+        <h2 id="c1"></h2>
+    </div>
+    <br>
+
 </body>

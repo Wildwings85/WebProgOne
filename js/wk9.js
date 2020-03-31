@@ -1,117 +1,92 @@
-var questions = new Array();
-var effects = new Array();
-
-function Question(id, weight, label) {
-    this.id = id;
-    this.weight = weight;
-    this.label = label;
-}
-
-function Effect(id, weight, label) {
-    this.id = id;
-    this.weight = weight;
-    this.label = label;
-}
-
-function Patient(fm) {
-    this.question = new Array();
-    this.effect = new Array();
-
-    var list_question = document.querySelectorAll("#container_questions input[type='checkbox']");
-    for (var x = 0; x < list_question.length; x++) {
-        this.question[x] = list_question[x].checked;
-    }
-
-    var list_effect = document.querySelectorAll("#container_effects input[type='checkbox']");
-    for (var x = 0; x < list_effect.length; x++) {
-        this.effect[x] = list_effect[x].checked;
-    }
-
-    this.diagnose = function () {
-        var score_q = 0.0;
-        var score_e = 0.0;
-        this.score = function () {
-            for (var x = 0; x < questions.length; x++) {
-                if (this.question[x]) {
-                    score_q += Number(questions[x].weight);
-                }
-            }
-
-            for (var x = 0; x < effects.length; x++) {
-                if (this.effect[x]) {
-                    score_e += Number(effects[x].weight);
-                }
-            }
-            console.log("DEBUG: score_q=" + score_q + " score_e=" + score_e);
-            return score_q & score_e;
-        }
-        console.log("DEBUG: score_q=" + score_q + " score_e=" + score_e);
-        if (score_q >=7 && score_e >=1) {
-            return "Your answers suggest you are suffering from severe depression. It is important that you schedule an appointment with your doctor or a mental health worker now."
-        } else if (score_q >=4 || score_q <=6 && score_e >=1) {
-            return "Your answers suggest you are suffering from moderate depression. Consider watchful waiting, and testing again normally within two weeks."
-        } else if (score_q >=1 || score_q <=3 && score_e >=1) {
-            return "Your answers suggest you are suffering from mild depression.Consider watchful waiting, and testing again normally within two weeks."
-        } else {
-            return "Your answers suggest you may not be suffering from depression. Still if you feel something isn’t quite right we recommend you schedule an appointment with your doctor. "
-        }
-    }
-    if (!(this.question[0] || this.question[1] || this.question[2] || this.question[4] || this.question[5] || this.question[6] || this.question[7] || this.question[8]) && (this.question[9]) && !(this.effect[0] || this.effect[1] || this.effect[2])) {
-        return "If you’re having thoughts about hurting or killing yourself please reach out straight away and talk to someone who’s trained to help. Even if you feel like no-one in the world gets you right now, there are people who can support you.";
-    }
-}
-
-function process_form() {
-    var fm = document.getElementById("my_form");
-    var out = document.getElementById("output");
-    var patient = new Patient(fm);
-    //console.log("Debug:" + JSON.stringify(patient));
-    out.innerHTML = patient.diagnose();
-    var score = patient.score();
-}
-
+//display time
 function load_data() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            var qn = this.responseXML.getElementsByTagName("question");
-            for (var x = 0; x < qn.length; x++) {
-                var question = new Question(
-                    qn[x].attributes['id'].value,
-                    qn[x].attributes['weight'].value,
-                    qn[x].attributes['label'].value,
-                    qn[x].innerHTML);
-                questions.push(question);
-            }
+    var d = new Date();
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-            var ef = this.responseXML.getElementsByTagName("effect");
-            for (var x = 0; x < ef.length; x++) {
-                var effect = new Effect(
-                    ef[x].attributes['id'].value,
-                    ef[x].attributes['weight'].value,
-                    ef[x].attributes['label'].value,
-                    ef[x].innerHTML);
-                effects.push(effect);
-            }
+    document.getElementById("est").innerHTML = "<b>" + days[d.getDay()] + "</b> || " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + ":" + checkTime(d.getSeconds());
+    document.getElementById("utc").innerHTML = "<b>" + days[d.getUTCDay()] + "</b> || " + months[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear() + "<br>" + checkTime(d.getUTCHours()) + ":" + checkTime(d.getUTCMinutes()) + ":" + checkTime(d.getUTCSeconds());
+    //refresh
+    setTimeout(function () { load_data() }, 100);
+}
+function checkTime(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+}
+//elapsed time
+function elapsedTime() {
+    var startDate = new Date("Dec 1, 2019 00:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = now - startDate;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
+        document.getElementById("e1").innerHTML = days + " d " + hours + " h "
+            + minutes + " m " + seconds + " s ";
+    }, 1000);
+}
+function elapsedTime2() {
+    var startDate = new Date("Jan 20, 2020 00:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = now - startDate;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            var qns = "";
-            for (var x = 0; x < questions.length; x++) {
-                qns = qns + "<div class='form-group form-check'>";
-                qns = qns + "<input type='checkbox' class='form-check-input' id='question" + questions[x].id + "'>";
-                qns = qns + "<label class='form-check-label' for='question" + questions[x].id + "'>" + questions[x].label + "</label></div>";
-            }
-            document.getElementById("container_questions").innerHTML = qns;
+        document.getElementById("e2").innerHTML = days + " d " + hours + " h "
+            + minutes + " m " + seconds + " s ";
+    }, 1000);
+}
+//countdown
+function countDown() {
+    var countDownDate = new Date("Jan 1, 2021 00:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            var efs = "";
-            for (var x = 0; x < effects.length; x++) {
-                efs = efs + "<div class='form-group form-check'>";
-                efs = efs + "<input type='checkbox' class='form-check-input' id='effect" + effects[x].id + "'>";
-                efs = efs + "<label class='form-check-label' for='effect" + effects[x].id + "'>" + effects[x].label + "</label></div>";
-            }
-            document.getElementById("container_effects").innerHTML = efs;
+        document.getElementById("c1").innerHTML = days + " d " + hours + " h "
+            + minutes + " m " + seconds + " s ";
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("c1").innerHTML = "EXPIRED";
         }
+    }, 1000);
+}
+//toggle hidden elements
+function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
     };
-    xhttp.open("GET", "./phq.xml", true);
-    xhttp.send();
+}
+function myFunction2() {
+    var x = document.getElementById("output");
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "block";
+    };
+}
+//loop 
+function myFunction3() {
+    var five = ["HANDS - Wash them often", "ELBOW - Cough into it", "FACE - Don't touch it", "SPACE - Keep safe distance", "HOME - Stay if you can"];
+    var text = "";
+    var i;
+    for (i = 0; i < five.length; i++) {
+        text += five[i] + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
 }
