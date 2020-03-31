@@ -18,7 +18,6 @@
             transform: translate(-50%, -50%);
             color: white;
         }
-
         #myDIV {
             width: 100%;
             padding: 50px 0;
@@ -27,12 +26,19 @@
             margin-top: 20px;
             display: none;
         }
-
         #output {
             width: 100%;
             padding: 20px 0;
             text-align: center;
             background-color: lightcoral;
+            margin-top: 20px;
+            display: none;
+        }
+        #output2 {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: lightgreen;
             margin-top: 20px;
             display: none;
         }
@@ -98,7 +104,7 @@
     </div>
     <br>
     <div class="container text-center">
-        <button type="button" class="btn btn-info" onclick="myFunction(); myFunction2()">Click Me</button>
+        <button type="button" class="btn btn-info" onclick="myFunction(); myFunction2(); myFunction4(); getRnd()">Click Me</button>
     </div>
     <br>
     <div class="container" id="myDIV">
@@ -119,7 +125,11 @@
     <div class="container" id="output">
         <p id="demo"></p>
     </div>
-    <br>
+    
+    <div class="container" id="output2">
+        <p id="random"></p>
+    </div>
+
     <div class="container text-center">
         <h4>Countdown to 2021</h4>
         <br>
