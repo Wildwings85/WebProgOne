@@ -4,12 +4,12 @@ function load_data() {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    document.getElementById("est").innerHTML = "<b>" + days[d.getDay()] + "</b> || " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + checkTime(d.getHours()) + ":" + checkTime(d.getMinutes()) + ":" + checkTime(d.getSeconds());
-    document.getElementById("utc").innerHTML = "<b>" + days[d.getUTCDay()] + "</b> || " + months[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear() + "<br>" + checkTime(d.getUTCHours()) + ":" + checkTime(d.getUTCMinutes()) + ":" + checkTime(d.getUTCSeconds());
+    document.getElementById("est").innerHTML = "<b>" + days[d.getDay()] + "</b> || " + months[d.getMonth()] + " " + d.getDate() + ", " + d.getFullYear() + "<br>" + addZero(d.getHours()) + ":" + addZero(d.getMinutes()) + ":" + addZero(d.getSeconds());
+    document.getElementById("utc").innerHTML = "<b>" + days[d.getUTCDay()] + "</b> || " + months[d.getUTCMonth()] + " " + d.getUTCDate() + ", " + d.getUTCFullYear() + "<br>" + addZero(d.getUTCHours()) + ":" + addZero(d.getUTCMinutes()) + ":" + addZero(d.getUTCSeconds());
     //refresh
     setTimeout(function () { load_data() }, 100);
 }
-function checkTime(i) {
+function addZero(i) {
     if (i < 10) {
         i = "0" + i;
     }
