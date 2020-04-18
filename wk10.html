@@ -12,6 +12,7 @@
 
     <title>Final Week</title>
     <script src="./js/wk10.js"></script>
+    <link rel="stylesheet" href="./css/wk10.css">
     <style>
         body {
             background-image: url(./img/blue-wallpaper-2680270.jpg);
@@ -28,7 +29,7 @@
 </head>
 
 <body>
-<!-- navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="./index.html">Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -58,7 +59,7 @@
             </ul>
         </div>
     </nav>
-<!-- banner -->
+    <!-- banner -->
     <div class="fluid-container text-center">
         <img src="./img/42048ca06c340a83-xmas-banner-snow-no-text-6-secs-killgerm-chemicals-ltd.gif"
             alt="snowing-banner">
@@ -66,31 +67,41 @@
             <h1>Let's Learn Idioms!</h1>
         </div>
     </div>
-<br>
-<!-- control area -->
+    <br>
+    <!-- output area -->
+    <div class="container text-center" id="output">
+        <iframe width='560' height='315' src='https://www.youtube.com/embed/qZh8AhV8u3I' frameborder='0'; allow='encrypted-media' allowfullscreen></iframe>
+    </div>
+    <br>
+    <!-- control area -->
     <div class="container text-center" id="input">
         <div class="row">
-            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction1()">Under the Weather</button></div>
-            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction2()">Time Flies</button></div>
-            <div class="col"><button type="button" class="btn btn-light">Break the Ice</button></div>
-            <div class="col"><button type="button" class="btn btn-light">A Piece of Cake</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction1(); show()">Under the
+                    Weather</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction2()">Time Flies</button>
+            </div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction3()">Break the Ice</button>
+            </div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction4()">A Piece of
+                    Cake</button></div>
         </div>
         <br>
         <div class="row">
-            <div class="col"><button type="button" class="btn btn-light">Don't Look a Gift Horse in the Mouth</button></div>
-            <div class="col"><button type="button" class="btn btn-light">To Get the Ball Rolling</button></div>
-            <div class="col"><button type="button" class="btn btn-light">To be On Top of the World</button></div>
-            <div class="col"><button type="button" class="btn btn-light">To See Light at the End of the Tunnel</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction5()">Don't Look a Gift Horse
+                    in the Mouth</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction6()">To Get the Ball
+                    Rolling</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction7()">To be On Top of the
+                    World</button></div>
+            <div class="col"><button type="button" class="btn btn-light" onclick="myFunction8()">To See Light at the End
+                    of the Tunnel</button></div>
         </div>
     </div>
-<br>
-<!-- output area -->
-<div class="container text-center" id="output">
-    
-    <p id="demo"></p>
-</div>
-<!-- quiz -->
-
+    <br>
+    <!-- quiz -->
+    <div class="container text-center">
+        <button type="button" class="btn btn-danger" onclick="window.location.href = './quiz.html';">Start Quiz</button>
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
